@@ -1,0 +1,31 @@
+body {
+background-color: #dbd9d9;
+}
+
+.erreur {
+    color: red;
+}
+
+h1.headerapp{
+    margin-top: 30px;
+    padding: 15px;
+    color: #1c1f23;
+}
+
+div.formaccueil{
+    margin-top: 3em;
+}
+
+.bouton-inscription{
+    margin-left: 10px;
+}
+
+.headerappconnected{
+    border-bottom: #1c1f23;
+}
+
+.sticky-right{
+    position:-webkit-sticky;
+    position:sticky;
+    right:0;
+    z-index:1020}

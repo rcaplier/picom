@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenue sur Pi'Com</title>
+    <link th:replace="~{incl/template :: link}"/>
+</head>
+<body>
+<div th:replace="~{incl/template :: headerapp}"></div>
+
+<div class="container formaccueil">
+    <div class="row pt-2">
+        <p class="lead text-center mt-5 mb-5">La gestion de vos campagnes publicitaire n'a jamais été aussi simple.</p>
+        <div class="col-4"></div>
+        <div class="col-4">
+            <form th:action="@{/}" th:method="post" class="align-content-center">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Adresse email</label>
+                    <input type="text" class="form-control" id="email" name="email" placeholder="Adresse email"
+                           required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Mot de passe</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe"
+                           required>
+                </div>
+                <div class="mb-3 align-content-center text-center">
+                    <input type="submit" class="btn btn-secondary text-center" value="Se connecter">
+                </div>
+            </form>
+        </div>
+        <div class="col-4"></div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-4"></div>
+        <div class="col-4 text-center align-content-center">
+            <p>Nouveau sur l'application ? <a class="btn btn-primary bouton-inscription" th:href="@{/public/registration}" role="button">Inscription</a>
+            </p>
+        </div>
+        <div class="col-4"></div>
+
+    </div>
+</div>
+
+<div th:replace="~{incl/template :: footerapp}"></div>
+
+</body>
+</html>

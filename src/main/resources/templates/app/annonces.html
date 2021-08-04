@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenue sur Pi'Com</title>
+    <link th:replace="~{incl/template :: link}"/>
+</head>
+<body>
+<div th:replace="~{incl/template :: headerappconnected}"></div>
+<div class="container text-center">
+    <h2 class="mt-2">Bienvenue <span th:text="${user.firstName}"></span> <span th:text="${user.lastName}"></span></h2>
+    <div class="row pt-2">
+        <div class="col-12">
+            <h3>Liste des campagnes publicitaires : </h3>
+            <th:block th:each="annonce : ${campagnes}">
+                <ul>
+                    <li><a th:text="${annonce.title}" href="#"></a> créée le : <span th:text="${annonce.getCreationDateFormated()}"></span></li>
+                </ul>
+            </th:block>
+
+
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-4"></div>
+        <div class="col-4"><a th:href="@{/app/newcampaign}"><img class="img-fluid" width="50px" th:src="@{/img/add-icon.png}"></a></div>
+        <div class="col-4"></div>
+    </div>
+</div>
+
+<div th:replace="~{incl/template :: footerapp}"></div>
+
+</body>
+</html>

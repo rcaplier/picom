@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Pi'Com - Erreur</title>
+    <link th:replace="~{incl/template :: link}"/>
+</head>
+<body>
+<div th:replace="~{incl/template :: headerapp}"></div>
+
+<div class="container">
+    <div class="row pt-2">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <p class="lead mt-5 mb-5">Oups, on dirait bien que quelque chose s'est mal passé.</p>
+        </div>
+        <div class="col-4"></div>
+    </div>
+    <div class="row mt-5 text-center align-content-center">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <a class="btn btn-primary mt-5 mb-5" href="/index">Retour à l'accueil</a>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+
+<div th:replace="~{incl/template :: footerapp}"></div>
+
+</body>
+</html>
